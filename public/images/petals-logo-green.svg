@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Outer circular ring in dark green -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#124935" stroke-width="4.5" />
+  
+  <!-- Garlic Bulb at top -->
+  <g transform="translate(100, 32) scale(0.65)">
+    <!-- Main bulb body -->
+    <path d="M 0 -22 C -8 -16 -20 2 -18 18 C -16 28 -5 32 0 32 C 5 32 16 28 18 18 C 20 2 8 -16 0 -22 Z" fill="#fcfbf7" stroke="#124935" stroke-width="2.5" />
+    <!-- Clove details -->
+    <path d="M 0 -22 C -4 -12 -8 5 -6 20 C -4 28 -1 32 0 32" stroke="#124935" stroke-width="1.8" fill="none" />
+    <path d="M 0 -22 C 4 -12 8 5 6 20 C 4 28 1 32 0 32" stroke="#124935" stroke-width="1.8" fill="none" />
+    <!-- Golden clove slice in front -->
+    <path d="M -16 10 C -12 18 -2 24 6 20 C 14 16 12 6 2 2 C -8 -2 -14 4 -16 10 Z" fill="#dfad5c" stroke="#124935" stroke-width="2" />
+    <!-- Root tip -->
+    <circle cx="-1" cy="21" r="2.2" fill="#8c6239" />
+  </g>
+
+  <!-- "Petals" Script Typography in Dark Green -->
+  <text x="100" y="112" text-anchor="middle" font-family="'Brush Script MT', 'Dancing Script', 'Playfair Display', cursive, sans-serif" font-size="52" font-weight="bold" font-style="italic" fill="#124935" letter-spacing="-1">Petals</text>
+
+  <!-- 3 Green Leaves under the script -->
+  <g transform="translate(100, 128) scale(0.9)">
+    <!-- Center Leaf -->
+    <path d="M 0 0 C -4 -7 -3 -15 0 -20 C 3 -15 4 -7 0 0 Z" fill="#22c55e" stroke="#124935" stroke-width="1" />
+    <!-- Left Leaf -->
+    <path d="M -3 -1 C -10 -4 -16 -9 -17 -16 C -11 -16 -5 -10 -3 -1 Z" fill="#16a34a" stroke="#124935" stroke-width="1" />
+    <!-- Right Leaf -->
+    <path d="M 3 -1 C 10 -4 16 -9 17 -16 C 11 -16 5 -10 3 -1 Z" fill="#16a34a" stroke="#124935" stroke-width="1" />
+  </g>
+
+  <!-- "PEELED GARLIC" along the bottom curved arc in Dark Green -->
+  <path id="curve" d="M 40 156 A 70 70 0 0 0 160 156" fill="none" stroke="none" />
+  <text font-family="'Montserrat', sans-serif" font-size="14.5" font-weight="700" fill="#124935" letter-spacing="2.8">
+    <textPath href="#curve" startOffset="50%" text-anchor="middle">
+      PEELED GARLIC
+    </textPath>
+  </text>
+</svg>
+

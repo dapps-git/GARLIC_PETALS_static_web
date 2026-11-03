@@ -1,0 +1,192 @@
+.footer {
+  background-color: #142817; /* Sampled deep green from user screenshot */
+  color: #a4b7ab;
+  padding: 4.5rem 0 2rem;
+  font-family: var(--font-family);
+  font-weight: 300; /* Light weight Montserrat */
+  font-size: 0.88rem;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footerContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.35fr 1fr;
+  gap: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Column 1: Brand */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.logoWrapper {
+  line-height: 0;
+}
+
+.footerLogoImg {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.brandBio {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #a4b7ab;
+  font-weight: 300;
+  max-width: 320px;
+}
+
+/* Headings */
+.columnHeading {
+  font-family: var(--font-family);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* Link Lists */
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.linkList a {
+  color: #a4b7ab;
+  font-size: 0.85rem;
+  font-weight: 300;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.linkList a:hover {
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+/* Contact Info Column */
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #a4b7ab;
+  font-size: 0.85rem;
+  font-weight: 300;
+  transition: color 0.2s ease;
+}
+
+.contactRow:hover {
+  color: #ffffff;
+}
+
+.contactIcon {
+  color: #4ade80;
+  flex-shrink: 0;
+}
+
+.addressRow {
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.addressText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  line-height: 1.5;
+}
+
+.addressText strong {
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+}
+
+.addressText span {
+  font-size: 0.82rem;
+  color: #9cb0a3;
+  font-weight: 300;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.copyright {
+  font-size: 0.82rem;
+  color: #7d9185;
+  font-weight: 300;
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.socialBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: #a4b7ab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.socialBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

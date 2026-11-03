@@ -1,0 +1,194 @@
+.storySection {
+  padding: 5rem 0 4rem;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #f0ebe1;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* 2-Column Grid (Seamless Desktop Integration) */
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* Left Column: Writing Section */
+.storyLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.eyebrowWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 0.35rem;
+}
+
+.eyebrow {
+  font-family: var(--font-poppins);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0e3b2b;
+  letter-spacing: 1px;
+}
+
+.eyebrowLine {
+  width: 65px;
+  height: 2px;
+  background: #0e3b2b;
+  margin-top: 0.4rem;
+  border-radius: 2px;
+}
+
+.headingBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1.35rem;
+}
+
+.welcomeText {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.5rem, 4.2vw, 3.8rem);
+  font-weight: 700;
+  color: #0e3b2b;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.petalsRow {
+  position: relative;
+  display: inline-block;
+  line-height: 1.0;
+  margin-top: 0.2rem;
+}
+
+.petalsScript {
+  font-family: 'Dancing Script', cursive, sans-serif;
+  font-size: clamp(3.4rem, 5.8vw, 5.2rem);
+  font-weight: 700;
+  color: #0e3b2b;
+  letter-spacing: -0.5px;
+  display: inline-block;
+}
+
+.petalsGoldSwoosh {
+  position: absolute;
+  bottom: -6px;
+  left: 4px;
+  width: 95%;
+  height: auto;
+  pointer-events: none;
+}
+
+.paragraph {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.1px;
+  color: #52616b;
+  margin-bottom: 1.35rem;
+}
+
+/* Garlic Bulb Ornament with Flanking Gold Lines */
+.ornamentRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+  max-width: 440px;
+  margin-top: 1rem;
+}
+
+.ornamentLine {
+  flex: 1;
+  height: 1.5px;
+  background: #c9933b;
+  opacity: 0.85;
+}
+
+.garlicIconWrapper {
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right Column: Seamless Integrated Image (No separate card, borders or shadows) */
+.storyRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.seamlessPlatterImg {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ========================================================
+   RESPONSIVE: MOBILE VIEW (<= 768px)
+   Writing section first, garlic platter below
+   ======================================================== */
+@media (max-width: 768px) {
+  .storySection {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  /* Writing section first */
+  .storyLeft {
+    order: 1;
+  }
+
+  /* Image section below */
+  .storyRight {
+    order: 2;
+    width: 100%;
+  }
+
+  .seamlessPlatterImg {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .welcomeText {
+    font-size: 2.2rem;
+  }
+
+  .petalsScript {
+    font-size: 3.2rem;
+  }
+
+  .paragraph {
+    font-size: 16px;
+  }
+
+  .ornamentRow {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.85rem;
+  }
+}
