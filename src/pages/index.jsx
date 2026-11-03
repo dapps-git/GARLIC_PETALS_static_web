@@ -5,7 +5,6 @@ import Hero from '@/components/Hero';
 import OurStory from '@/components/OurStory';
 import Products from '@/components/Products';
 import Footer from '@/components/Footer';
-import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import OrderModal from '@/components/OrderModal';
 import BulkQuoteModal from '@/components/BulkQuoteModal';
 
@@ -75,8 +74,6 @@ export default function Home() {
         </main>
 
         <Footer onOpenOrder={handleOpenOrder} />
-
-        <FloatingWhatsApp onOpenOrder={handleOpenOrder} />
 
         {/* Address Form Modal -> Sends to WhatsApp */}
         {orderModalOpen && (

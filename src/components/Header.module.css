@@ -154,3 +154,14 @@
     display: block;
   }
 }
+
+@media (max-width: 768px) {
+  /* Remove brand logo from navbar in mobile view as requested */
+  .brandLogo {
+    display: none !important;
+  }
+  .navContainer {
+    justify-content: flex-end;
+  }
+}
+

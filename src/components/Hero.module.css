@@ -316,6 +316,7 @@
 .mobileBannerFrame {
   width: 100%;
   line-height: 0;
+  overflow: hidden;
 }
 
 .mobileBannerImg {

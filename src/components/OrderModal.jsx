@@ -223,7 +223,7 @@ export default function OrderModal({ orderData, onClose }) {
             )}
 
             {/* Address & Details Form */}
-            <form onSubmit={handleSubmit} className={styles.orderForm} noValidate>
+            <form onSubmit={handleSubmit} className={styles.orderForm} noValidate autoComplete="off">
               <div className={styles.formSectionTitle}>
                 <MapPin size={16} /> Delivery Address
                 <span className={styles.requiredNotice}>(* All fields required)</span>
@@ -238,6 +238,9 @@ export default function OrderModal({ orderData, onClose }) {
                     id="name"
                     type="text"
                     name="name"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    autoCapitalize="words"
                     placeholder="e.g. Rahul / Spice Kitchen"
                     value={formData.name}
                     onChange={handleChange}
@@ -255,6 +258,8 @@ export default function OrderModal({ orderData, onClose }) {
                     id="phone"
                     type="tel"
                     name="phone"
+                    inputMode="tel"
+                    autoComplete="off"
                     placeholder="10-digit number (e.g. 9876543210)"
                     value={formData.phone}
                     onChange={handleChange}
@@ -273,6 +278,8 @@ export default function OrderModal({ orderData, onClose }) {
                   id="street"
                   type="text"
                   name="street"
+                  autoComplete="off"
+                  autoCorrect="off"
                   placeholder="Door No, Building Name, Street / Road"
                   value={formData.street}
                   onChange={handleChange}
@@ -289,6 +296,8 @@ export default function OrderModal({ orderData, onClose }) {
                     id="landmark"
                     type="text"
                     name="landmark"
+                    autoComplete="off"
+                    autoCorrect="off"
                     placeholder="Near Junction, Temple, etc."
                     value={formData.landmark}
                     onChange={handleChange}
@@ -303,6 +312,9 @@ export default function OrderModal({ orderData, onClose }) {
                     id="city"
                     type="text"
                     name="city"
+                    autoComplete="off"
+                    autoCorrect="off"
+                    autoCapitalize="words"
                     placeholder="e.g. Aluva, Thrissur town, etc."
                     value={formData.city}
                     onChange={handleChange}
@@ -341,6 +353,8 @@ export default function OrderModal({ orderData, onClose }) {
                     id="pincode"
                     type="text"
                     name="pincode"
+                    inputMode="numeric"
+                    autoComplete="off"
                     maxLength={6}
                     placeholder="6-digit PIN (e.g. 680001)"
                     value={formData.pincode}
@@ -358,6 +372,7 @@ export default function OrderModal({ orderData, onClose }) {
                   id="note"
                   name="note"
                   rows={2}
+                  autoComplete="off"
                   placeholder="e.g. Deliver before 11 AM, deliver to back kitchen door, etc."
                   value={formData.note}
                   onChange={handleChange}

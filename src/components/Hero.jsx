@@ -9,7 +9,23 @@ import {
 } from 'lucide-react';
 import styles from './Hero.module.css';
 
-export default function Hero() {
+export default function Hero({ onOpenOrder }) {
+  const handleMobileBuy = () => {
+    if (typeof onOpenOrder === 'function') {
+      onOpenOrder({
+        pack: {
+          id: 'garlic-1kg',
+          name: 'Petals Peeled Garlic',
+          size: '1 Kg',
+          price: 200
+        },
+        quantity: 1
+      });
+    } else if (typeof window !== 'undefined') {
+      window.location.hash = '#products';
+    }
+  };
+
   return (
     <section id="home" className={styles.heroSection}>
       {/* ========================================================
@@ -187,14 +203,15 @@ export default function Hero() {
 
       {/* ========================================================
           MOBILE VIEW BANNER (Tailored for vertical smartphone screens)
+          IDEAL FOR section cropped out as requested
           ======================================================== */}
       <div className={styles.mobileHeroWrapper}>
         <div className={styles.mobileBannerFrame}>
           <Image 
-            src="/images/mobile-banner.jpg" 
+            src="/images/mobile-banner-clean.jpg" 
             alt="Petals Peeled Garlic Mobile Banner" 
-            width={900} 
-            height={1600} 
+            width={576} 
+            height={852} 
             className={styles.mobileBannerImg}
             priority
           />
