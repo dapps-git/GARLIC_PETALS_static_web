@@ -1,9 +1,10 @@
 import '@/styles/globals.css';
 import Head from 'next/head';
+import { CartProvider } from '@/context/CartContext';
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <CartProvider>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Petals Peeled Garlic | Fresh, Hygienic & 100% Pure Ready-to-Use Garlic</title>
@@ -11,7 +12,6 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/images/garlic-icon.png" />
       </Head>
       <Component {...pageProps} />
-    </>
+    </CartProvider>
   );
 }
-

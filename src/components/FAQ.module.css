@@ -1,0 +1,210 @@
+.section {
+  padding: 5.5rem 1.5rem;
+  background-color: #fbf9f5;
+  border-top: 1px solid #ebe5dc;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-family);
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #15803d;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0e3b2b;
+  letter-spacing: -0.5px;
+  margin: 0.2rem 0 0.5rem 0;
+}
+
+.divider {
+  width: 42px;
+  height: 3px;
+  background-color: #22c55e;
+  border-radius: 0;
+  margin: 0.35rem auto 0.75rem auto;
+}
+
+.subtitle {
+  font-family: var(--font-family);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #52616b;
+  margin: 0;
+}
+
+/* FAQ Accordion List */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 4rem;
+}
+
+.faqCard {
+  background: #ffffff;
+  border: 1px solid #e7e0d5;
+  border-radius: 0;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.faqCardOpen {
+  border-color: #0e3b2b;
+}
+
+.questionBtn {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.questionText {
+  font-family: var(--font-family);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0e3b2b;
+}
+
+.chevron {
+  color: #6a7c73;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  color: #0e3b2b;
+}
+
+.answerWrap {
+  padding: 0 1.5rem 1.35rem 1.5rem;
+  border-top: 1px dashed #f0eae0;
+}
+
+.answerText {
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  color: #52616b;
+  line-height: 1.65;
+  margin-top: 0.85rem;
+}
+
+/* CTA Banner (Ready to skip the peeling?) */
+.ctaBanner {
+  background-color: #0e3b2b;
+  color: #ffffff;
+  border-radius: 0;
+  padding: 2.75rem 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.ctaTitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.ctaSubtitle {
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  color: #cde0d5;
+  margin: 0;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+
+.waBtn {
+  background-color: #25d366;
+  color: #ffffff;
+  height: 46px;
+  padding: 0 1.5rem;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-family);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.waBtn:hover {
+  background-color: #1ebc59;
+}
+
+.orderBtn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.5px solid #ffffff;
+  height: 46px;
+  padding: 0 1.5rem;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-family);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.orderBtn:hover {
+  background-color: #ffffff;
+  color: #0e3b2b;
+}
+
+@media (max-width: 800px) {
+  .ctaBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .waBtn,
+  .orderBtn {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
