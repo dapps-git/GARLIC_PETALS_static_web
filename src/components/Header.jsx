@@ -48,11 +48,13 @@ export default function Header() {
               onClick={openCart}
               aria-label={`View cart (${totalItems} items)`}
             >
-              <ShoppingCart size={21} strokeWidth={2.2} />
+              <ShoppingCart size={22} strokeWidth={2} />
               {mounted && totalItems > 0 && (
                 <span className={styles.cartBadge}>{totalItems}</span>
               )}
             </button>
+
+            <span className={styles.mobileNavDivider} />
 
             <button 
               className={styles.menuToggle} 

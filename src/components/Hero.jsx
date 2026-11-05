@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { 
+import {
   ShoppingBag,
   Phone,
   Store,
@@ -35,11 +35,11 @@ export default function Hero({ onOpenOrder }) {
       <div className={styles.laptopHeroWrapper}>
         {/* Clean Background Image */}
         <div className={styles.laptopBgFrame}>
-          <Image 
-            src="/images/main-banner.jpg" 
-            alt="Petals Peeled Garlic Banner" 
-            width={1920} 
-            height={1040} 
+          <Image
+            src="/images/main-banner.jpg"
+            alt="Petals Peeled Garlic Banner"
+            width={1920}
+            height={1040}
             className={styles.laptopBgImg}
             priority
           />
@@ -167,7 +167,7 @@ export default function Hero({ onOpenOrder }) {
           </div>
         </div>
 
-        {/* IDEAL FOR Bottom Ribbon Bar in Both Desktop & Mobile Views */}
+        {/* IDEAL FOR Bottom Ribbon Bar in Desktop View */}
         <div className={styles.idealForRibbon}>
           <div className={styles.ribbonContainer}>
             <span className={styles.idealForTag}>IDEAL FOR</span>
@@ -195,6 +195,106 @@ export default function Hero({ onOpenOrder }) {
               <Factory size={15} strokeWidth={2} />
               <span>FOOD INDUSTRIES</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ========================================================
+          MOBILE VIEW BANNER & QUALITY BAR (<= 768px)
+          Exact match to user screenshot layout and design
+          ======================================================== */}
+      <div className={styles.mobileHeroWrapper}>
+        {/* Floating Rounded Banner Card */}
+        <div className={styles.mobileHeroCard}>
+          <div className={styles.mobileHeroBgFrame}>
+            <Image
+              src="/images/main-banner.jpg"
+              alt="Petals Peeled Garlic Banner"
+              width={1200}
+              height={680}
+              className={styles.mobileHeroBgImg}
+              priority
+            />
+          </div>
+
+          <div className={styles.mobileHeroOverlay}>
+            <div className={styles.mobileContentLeft}>
+              {/* Leaves Accent */}
+              <div className={styles.mobileLeavesAccent}>
+                <svg width="26" height="15" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24 26C22.8 15.5 13 6 1 6C1 18.5 11 26 24 26Z" fill="#1b6347" />
+                  <path d="M24 26C25.2 15.5 35 6 47 6C47 18.5 37 26 24 26Z" fill="#2d8a63" />
+                </svg>
+              </div>
+
+              {/* Title: Pure Garlic. (Serif) + Pure Trust. (Bold Sans) */}
+              <div className={styles.mobileHeadline}>
+                <span className={styles.mobilePureGarlic}>Pure Garlic.</span>
+                <span className={styles.mobilePureTrust}>Pure Trust.</span>
+              </div>
+
+              {/* Subtitle */}
+              <p className={styles.mobileSubtitle}>
+                Freshness you can count on,<br />
+                quality you can taste.
+              </p>
+
+              {/* Order Now Pill Button */}
+              <a href="#products" className={styles.mobileOrderBtn}>
+                <span>Order Now</span>
+                <span className={styles.btnArrow}>&rarr;</span>
+              </a>
+            </div>
+
+            {/* Carousel Dots at Bottom Center */}
+            <div className={styles.mobileDots}>
+              <span className={`${styles.mobileDot} ${styles.mobileDotActive}`} />
+              <span className={styles.mobileDot} />
+              <span className={styles.mobileDot} />
+            </div>
+          </div>
+        </div>
+
+        {/* Feature / Quality Bar Below Hero Card */}
+        <div className={styles.mobileFeatureBar}>
+          <div className={styles.mobileFeatureItem}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0e3b2b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+            </svg>
+            <span className={styles.featureLabel}>100%<br />Natural</span>
+          </div>
+
+          <div className={styles.featureDivider} />
+
+          <div className={styles.mobileFeatureItem}>
+            <Utensils size={17} strokeWidth={1.8} color="#0e3b2b" />
+            <span className={styles.featureLabel}>Premium<br />Quality</span>
+          </div>
+
+          <div className={styles.featureDivider} />
+
+          <div className={styles.mobileFeatureItem}>
+            <svg width="19" height="17" viewBox="0 0 24 24" fill="none" stroke="#0e3b2b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="5.5" cy="17.5" r="3.5" />
+              <circle cx="18.5" cy="17.5" r="3.5" />
+              <path d="M15 6h4l2 5h-6V6z" />
+              <path d="M9 17h6" />
+              <path d="M19 17h-1.5" />
+              <path d="M9 12h5" />
+              <path d="M3 6h6v6H3z" />
+            </svg>
+            <span className={styles.featureLabel}>Fast<br />Delivery</span>
+          </div>
+
+          <div className={styles.featureDivider} />
+
+          <div className={styles.mobileFeatureItem}>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0e3b2b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
+            <span className={styles.featureLabel}>Trusted<br />Choice</span>
           </div>
         </div>
       </div>
