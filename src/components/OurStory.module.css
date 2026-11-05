@@ -7,9 +7,10 @@
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  width: 100%;
 }
 
 /* 2-Column Grid (Seamless Desktop Integration) */
@@ -150,7 +151,11 @@
    ======================================================== */
 @media (max-width: 768px) {
   .storySection {
-    padding: 3.5rem 0 2.5rem;
+    padding: 3rem 0 2rem;
+  }
+
+  .container {
+    padding: 0 0.85rem;
   }
 
   .storyGrid {

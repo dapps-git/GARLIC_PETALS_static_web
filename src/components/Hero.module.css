@@ -42,8 +42,8 @@
 .laptopContentLeft {
   position: absolute;
   top: 50%;
-  transform: translateY(-56%);
-  left: 4%;
+  transform: translateY(-50%);
+  left: 4.5%;
   width: 45%;
   max-width: 560px;
   display: flex;
@@ -79,30 +79,30 @@
 
 .pureGarlicText {
   font-family: 'Dancing Script', cursive, sans-serif;
-  font-size: clamp(2.7rem, 4.3vw, 4.8rem);
-  font-weight: 700;
-  color: #0e3b2b;
-  letter-spacing: -0.5px;
+  font-size: clamp(2.2rem, 3.5vw, 3.8rem);
+  font-weight: 600;
+  color: #124935;
+  letter-spacing: 0.2px;
   display: inline-block;
 }
 
-/* Golden brush swoosh underline under Garlic. */
+/* Delicate subtle gold underline */
 .goldSwoosh {
   position: absolute;
-  bottom: -4px;
-  right: -2px;
-  width: 62%;
+  bottom: -2px;
+  right: 0;
+  width: 58%;
   height: auto;
   pointer-events: none;
 }
 
 .pureTrustText {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(2.5rem, 4.0vw, 4.5rem);
-  font-weight: 800;
+  font-family: var(--font-poppins);
+  font-size: clamp(2.0rem, 3.3vw, 3.6rem);
+  font-weight: 600;
   color: #0e3b2b;
-  line-height: 0.95;
-  letter-spacing: -1px;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
   margin-top: 0.15rem;
 }
 
@@ -112,25 +112,25 @@
   align-items: center;
   gap: 0.6rem;
   width: 100%;
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
 }
 
 .flankLine {
   flex: 1;
-  height: 1.5px;
+  height: 1px;
   background: #c9933b;
-  opacity: 0.85;
+  opacity: 0.5;
 }
 
 .pillBadge {
-  border: 2px solid #0e3b2b;
+  border: 1px solid rgba(14, 59, 43, 0.35);
   border-radius: 999px;
-  padding: 0.45rem 1.35rem;
+  padding: 0.35rem 1.15rem;
   background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 2px 10px rgba(14, 59, 43, 0.08);
+  box-shadow: 0 2px 8px rgba(14, 59, 43, 0.05);
   font-family: var(--font-family);
-  font-size: clamp(0.72rem, 0.86vw, 0.92rem);
-  font-weight: 700;
+  font-size: clamp(0.72rem, 0.82vw, 0.88rem);
+  font-weight: 500;
   color: #0e3b2b;
   letter-spacing: 0.2px;
   white-space: nowrap;
@@ -142,7 +142,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-top: 0.75rem;
+  margin-top: 0.6rem;
   padding: 0 0.15rem;
 }
 
@@ -150,20 +150,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.38rem;
   flex: 1;
 }
 
 .badgeCircle {
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  border: 1.8px solid #0e3b2b;
+  border: 1.2px solid rgba(14, 59, 43, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
   transition: transform 0.2s ease;
 }
 
@@ -172,10 +172,9 @@
 }
 
 .badgeDivider {
-  width: 1.2px;
-  height: 44px;
-  background: #0e3b2b;
-  opacity: 0.85;
+  width: 1px;
+  height: 34px;
+  background: rgba(14, 59, 43, 0.2);
   margin: 0 0.2rem;
   align-self: center;
 }
@@ -187,17 +186,17 @@
   text-align: center;
   color: #0e3b2b;
   font-family: var(--font-family);
-  font-size: clamp(0.72rem, 0.82vw, 0.85rem);
-  line-height: 1.2;
+  font-size: clamp(0.68rem, 0.78vw, 0.82rem);
+  line-height: 1.25;
 }
 
 .boldLabel {
-  font-weight: 700;
+  font-weight: 600;
   display: block;
 }
 
 .subLabel {
-  font-weight: 600;
+  font-weight: 500;
   display: block;
 }
 
@@ -205,89 +204,100 @@
 .heroActionButtons {
   display: flex;
   align-items: center;
-  gap: 1.15rem;
-  margin-top: 0.9rem;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
 }
 
 .heroOrderBtn {
   font-family: var(--font-family);
   background: #0e3b2b;
   color: #ffffff;
-  padding: 0.72rem 1.85rem;
-  border-radius: 10px;
-  font-size: 0.96rem;
-  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 14px rgba(14, 59, 43, 0.35);
-  transition: all 0.25s ease;
+  gap: 0.45rem;
+  box-shadow: 0 3px 10px rgba(14, 59, 43, 0.25);
+  transition: all 0.2s ease;
   text-decoration: none;
-  border: 1.5px solid #0e3b2b;
+  border: none;
+  cursor: pointer;
 }
 
 .heroOrderBtn:hover {
-  background: #16533d;
-  border-color: #16533d;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(14, 59, 43, 0.45);
+  background: #14533c;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(14, 59, 43, 0.35);
 }
 
 .heroContactBtn {
   font-family: var(--font-family);
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
   color: #0e3b2b;
-  border: 1.8px solid #0e3b2b;
-  padding: 0.7rem 1.6rem;
-  border-radius: 10px;
-  font-size: 0.96rem;
-  font-weight: 600;
+  border: none !important; /* Removed green border as requested */
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 2px 10px rgba(14, 59, 43, 0.08);
+  gap: 0.45rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.2s ease;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .heroContactBtn:hover {
-  background: #0e3b2b;
-  color: #ffffff;
-  transform: translateY(-2px);
+  background: #f4efe6;
+  color: #0e3b2b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* IDEAL FOR Ribbon at Bottom of Banner */
+/* IDEAL FOR Ribbon at Bottom of Banner (Both Desktop & Mobile Views) */
 .idealForRibbon {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
-  background: #0e3b2b;
-  border-top: 2.5px solid #c9933b;
-  padding: 0.55rem 2rem;
+  background: #083d24;
+  border-top: 2px solid #c9933b;
+  padding: 0.55rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
-  color: #ffffff;
   pointer-events: auto;
   z-index: 10;
 }
 
+.ribbonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.35rem;
+  width: 100%;
+  max-width: 1320px;
+}
+
 .idealForTag {
   font-family: var(--font-family);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   color: #ffffff;
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .ribbonDivider {
   width: 1px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.3);
+  height: 18px;
+  background: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
 }
 
 .idealTarget {
@@ -295,43 +305,219 @@
   align-items: center;
   gap: 0.45rem;
   color: #f1f8f4;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.82rem;
+  font-weight: 600;
   letter-spacing: 0.5px;
+  flex-shrink: 0;
 }
 
 .targetSep {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.35);
   font-weight: 300;
+  font-size: 0.85rem;
+  flex-shrink: 0;
 }
 
 /* --------------------------------------------------------
-   MOBILE VIEW BANNER (<= 768px)
+   RESPONSIVE LANDSCAPE BANNER ON MOBILE (<= 768px)
    -------------------------------------------------------- */
-.mobileHeroWrapper {
-  display: none;
-  width: 100%;
-}
-
-.mobileBannerFrame {
-  width: 100%;
-  line-height: 0;
-  overflow: hidden;
-}
-
-.mobileBannerImg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Responsive View Switch */
 @media (max-width: 768px) {
-  .laptopHeroWrapper {
+  .laptopContentLeft {
+    width: 44%;
+    max-width: 44%;
+    left: 3.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 0.35rem;
+  }
+
+  .topLeavesAccent {
+    padding-left: 0.4rem;
+    margin-bottom: -0.2rem;
+  }
+
+  .topLeavesAccent svg {
+    width: 28px;
+    height: 16px;
+  }
+
+  .pureGarlicText {
+    font-size: clamp(1.2rem, 4.5vw, 1.9rem);
+  }
+
+  .pureTrustText {
+    font-size: clamp(1.1rem, 4.2vw, 1.8rem);
+  }
+
+  /* Hide pill badge and circular badges on mobile as requested to prevent overlapping garlic bowl */
+  .pillContainer,
+  .badgesCluster {
     display: none !important;
   }
 
-  .mobileHeroWrapper {
-    display: block !important;
+  .heroActionButtons {
+    margin-top: 0.2rem;
+    gap: 0.35rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .heroOrderBtn {
+    padding: 0.28rem 0.55rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    border-radius: 6px;
+    gap: 0.25rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    border: none;
+    box-shadow: 0 2px 6px rgba(14, 59, 43, 0.25);
+  }
+
+  .heroOrderBtn svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .heroContactBtn {
+    padding: 0.28rem 0.55rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    border-radius: 6px;
+    gap: 0.25rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    border: none !important;
+    background: #ffffff;
+    color: #0e3b2b;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .heroContactBtn svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .idealForRibbon {
+    padding: 0.32rem 0.5rem;
+    border-top: 1.5px solid #c9933b;
+    display: flex !important;
+  }
+
+  .ribbonContainer {
+    gap: 0.45rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    white-space: nowrap;
+  }
+
+  .ribbonContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .idealForTag {
+    font-size: 0.58rem;
+    letter-spacing: 0.8px;
+  }
+
+  .ribbonDivider {
+    height: 12px;
+  }
+
+  .idealTarget {
+    font-size: 0.54rem;
+    gap: 0.25rem;
+    letter-spacing: 0.2px;
+  }
+
+  .idealTarget svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .targetSep {
+    font-size: 0.58rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .laptopContentLeft {
+    width: 43%;
+    max-width: 43%;
+    left: 2.5%;
+    gap: 0.2rem;
+  }
+
+  .pureGarlicText {
+    font-size: clamp(0.95rem, 4vw, 1.25rem);
+  }
+
+  .pureTrustText {
+    font-size: clamp(0.88rem, 3.8vw, 1.15rem);
+  }
+
+  .heroActionButtons {
+    margin-top: 0.15rem;
+    gap: 0.25rem;
+  }
+
+  .heroOrderBtn {
+    padding: 0.22rem 0.42rem;
+    font-size: 0.58rem;
+    font-weight: 500;
+    border-radius: 5px;
+    gap: 0.18rem;
+    border: none;
+  }
+
+  .heroOrderBtn svg {
+    width: 9px;
+    height: 9px;
+  }
+
+  .heroContactBtn {
+    padding: 0.22rem 0.42rem;
+    font-size: 0.58rem;
+    font-weight: 500;
+    border-radius: 5px;
+    gap: 0.18rem;
+    border: none !important;
+    background: #ffffff;
+    color: #0e3b2b;
+  }
+
+  .heroContactBtn svg {
+    width: 9px;
+    height: 9px;
+  }
+
+  .idealForRibbon {
+    padding: 0.22rem 0.3rem;
+  }
+
+  .ribbonContainer {
+    gap: 0.3rem;
+  }
+
+  .idealForTag {
+    font-size: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .idealTarget {
+    font-size: 0.48rem;
+    gap: 0.18rem;
+  }
+
+  .idealTarget svg {
+    width: 9px;
+    height: 9px;
+  }
+
+  .targetSep {
+    font-size: 0.5rem;
   }
 }

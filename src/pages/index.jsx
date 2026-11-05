@@ -58,14 +58,14 @@ export default function Home() {
           {/* Full Bleed Hero Banner */}
           <Hero onOpenOrder={handleOpenOrder} />
 
-          {/* Our Story Section */}
+          {/* Clean Ecommerce Product Pack Cards (1kg, 5kg, 10kg, 15kg) - Directly after Hero */}
+          <Products onOpenOrder={handleOpenOrder} />
+
+          {/* Our Story / About Section - Placed after Product Listing */}
           <OurStory />
 
           {/* Why Petals: Everything garlic should be */}
           <WhyPetals />
-
-          {/* Clean Ecommerce Product Pack Cards (1kg, 5kg, 10kg with Discounts) */}
-          <Products onOpenOrder={handleOpenOrder} />
 
           {/* How It Works: From our hub to your kitchen */}
           <HowItWorks onOpenOrder={handleOpenOrder} />

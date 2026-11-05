@@ -1,125 +1,69 @@
 .productsSection {
-  padding: 4.5rem 1.5rem;
+  padding: 3.5rem 0;
   background-color: #fbf9f5;
+  width: 100%;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1320px;
   margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
 }
 
-/* Header Area */
+/* Header Area: Simply Products */
 .headerWrapper {
-  position: relative;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.25rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.headerCenter {
-  max-width: 600px;
-}
-
-.categoryBadge {
-  display: inline-block;
-  font-family: var(--font-family);
-  font-size: 0.78rem;
-  letter-spacing: 2px;
-  font-weight: 600;
-  color: #15803d;
-  text-transform: uppercase;
-  margin-bottom: 0.35rem;
 }
 
 .sectionTitle {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.6rem;
-  font-weight: 700;
+  font-size: 2.25rem;
+  font-weight: 500; /* Reduced font weight as requested */
   color: #0e3b2b;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
   line-height: 1.15;
-  margin: 0.2rem 0 0.5rem 0;
-}
-
-.titleDivider {
-  width: 42px;
-  height: 3px;
-  background-color: #22c55e;
-  border-radius: 0;
-  margin: 0.35rem auto 0.75rem auto;
-}
-
-.sectionSubtitle {
-  font-family: var(--font-family);
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: #52616b;
   margin: 0;
 }
 
-/* Top Right Cart Button (Zero Border Radius) */
-.headerCartBtn {
-  position: absolute;
-  right: 0;
-  top: 0.25rem;
-  background-color: #ffffff;
-  border: 1px solid #d4cdc2;
-  border-radius: 0;
-  padding: 0.55rem 1.15rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-family: var(--font-family);
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: #1a2721;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: all 0.2s ease;
-}
-
-.headerCartBtn:hover {
-  background-color: #0e3b2b;
-  border-color: #0e3b2b;
-  color: #ffffff;
-}
-
-/* 3-Column Product Grid */
+/* 4-Column Product Grid (Desktop) */
 .productsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   align-items: stretch;
 }
 
-/* Clean Product Card (Zero Border Radius, Sharp Edges) */
+/* Clean Product Card matching Image 2 */
 .productCard {
   background: #ffffff;
-  border: 1px solid #e7e2d7;
-  border-radius: 0;
+  border: 1px solid #ebd9c8;
+  border-radius: 14px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .productCard:hover {
   transform: translateY(-4px);
   border-color: #0e3b2b;
-  box-shadow: 0 12px 28px rgba(14, 59, 43, 0.08);
+  box-shadow: 0 12px 28px rgba(14, 59, 43, 0.1);
 }
 
-/* Flush Image Frame (Zero Border Radius) */
+/* Image Frame with Top Rounded Corners */
 .imageCardFrame {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1.15;
+  aspect-ratio: 1 / 1.05;
   background-color: #f7f3ed;
-  border-bottom: 1px solid #ebe5dc;
-  border-radius: 0;
+  border-bottom: 1px solid #ede7df;
+  border-radius: 14px 14px 0 0;
   overflow: hidden;
 }
 
@@ -129,7 +73,7 @@
   object-fit: cover;
   object-position: center;
   display: block;
-  border-radius: 0;
+  border-radius: 14px 14px 0 0;
   transition: transform 0.35s ease;
 }
 
@@ -137,99 +81,205 @@
   transform: scale(1.03);
 }
 
-/* Clean Card Body (Minimalist, Centered) */
+/* Save Pill Tag (Top Left of Image) */
+.saveTag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #0e3b2b;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Body */
 .cardBody {
-  padding: 1.35rem 1.15rem 1.25rem;
+  padding: 1.25rem 1rem 1.15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  flex: 1;
 }
 
-/* Reduced Font Weight for Weight */
-.productWeight {
-  font-family: var(--font-family);
-  font-size: 1.35rem;
-  font-weight: 500; /* Reduced font weight */
-  color: #1a2822;
-  margin: 0 0 0.35rem 0;
-  letter-spacing: -0.2px;
-}
-
-/* Price Container */
-.priceContainer {
+/* Row 1: Weight | Price */
+.productMetaRow {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1.25rem;
+  gap: 0.45rem;
+  width: 100%;
+  margin-bottom: 0.45rem;
 }
 
-/* Reduced Font Weight for Price */
+.productWeight {
+  font-family: var(--font-family);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0e3b2b;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.metaDivider {
+  color: #d1c7bd;
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin: 0 0.35rem;
+  user-select: none;
+}
+
+.priceContainer {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
 .productPrice {
   font-family: var(--font-family);
-  font-size: 1.6rem;
-  font-weight: 500; /* Reduced font weight */
+  font-size: 1.35rem;
+  font-weight: 700;
   color: #0e3b2b;
   letter-spacing: -0.3px;
 }
 
 .strikethroughPrice {
   font-family: var(--font-family);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 400;
   color: #9ca3af;
   text-decoration: line-through;
 }
 
-.saveTag {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #0e3b2b;
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  padding: 0.35rem 0.65rem;
-  z-index: 2;
-  border-radius: 0;
+/* Row 2: 5 Stars + Score + Count */
+.ratingBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 0.95rem;
+  font-family: var(--font-family);
+  font-size: 0.82rem;
+  line-height: 1;
 }
 
-/* Dark Green Add to Cart Button (Zero Border Radius) */
-.addToCartBtn {
+.starsRow {
+  display: flex;
+  align-items: center;
+  gap: 0.12rem;
+}
+
+.starIcon {
+  flex-shrink: 0;
+}
+
+.ratingScore {
+  font-weight: 700;
+  color: #1a2822;
+  margin-left: 0.2rem;
+}
+
+.ratingCount {
+  color: #6b7280;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* Row 3: Cart Action with Quantity Stepper (- / +) & Cart Icon Only */
+.cartActionRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
   width: 100%;
-  height: 42px;
+  margin-top: auto;
+}
+
+.qtyStepper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f4ed;
+  border: 1px solid #ddd5c7;
+  border-radius: 8px;
+  height: 40px;
+  padding: 0 0.25rem;
+  flex: 1;
+  max-width: 130px;
+}
+
+.qtyBtn {
+  background: transparent;
+  border: none;
+  color: #0e3b2b;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.qtyBtn:hover {
+  background-color: rgba(14, 59, 43, 0.12);
+}
+
+.qtyBtn:active {
+  transform: scale(0.9);
+}
+
+.qtyValue {
+  font-family: var(--font-family);
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #0e3b2b;
+  min-width: 24px;
+  text-align: center;
+  user-select: none;
+}
+
+.cartIconOnlyBtn {
+  width: 44px;
+  height: 40px;
   background-color: #083d24;
   color: #ffffff;
   border: none;
-  border-radius: 0; /* Sharp zero border radius */
+  border-radius: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
-  font-family: var(--font-family);
-  font-size: 0.92rem;
-  font-weight: 500;
   cursor: pointer;
-  letter-spacing: 0.2px;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(8, 61, 36, 0.2);
+  flex-shrink: 0;
 }
 
-.addToCartBtn:hover {
+.cartIconOnlyBtn:hover {
   background-color: #125336;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(8, 61, 36, 0.3);
 }
 
-.addedBtn {
+.cartIconOnlyBtn:active {
+  transform: scale(0.95);
+}
+
+.addedIconBtn {
   background-color: #15803d !important;
 }
 
 /* Responsive */
-@media (max-width: 920px) {
-  .headerCartBtn {
-    position: static;
-    margin-top: 1rem;
+@media (max-width: 1100px) {
+  .headerWrapper {
+    margin-bottom: 2rem;
   }
 
   .productsGrid {
@@ -238,19 +288,122 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 640px) {
   .productsSection {
-    padding: 3rem 1rem;
+    padding: 2.25rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
   }
 
   .sectionTitle {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
 
+  .headerWrapper {
+    margin-bottom: 1.75rem;
+  }
+
+  /* 2 cards in one row on mobile view filling the width evenly */
   .productsGrid {
-    grid-template-columns: 1fr;
-    max-width: 320px;
-    margin: 0 auto;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  .productCard {
+    border-radius: 12px;
+  }
+
+  .imageCardFrame {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .productImage {
+    border-radius: 12px 12px 0 0;
+  }
+
+  .saveTag {
+    top: 8px;
+    left: 8px;
+    font-size: 0.62rem;
+    padding: 0.22rem 0.45rem;
+    border-radius: 4px;
+  }
+
+  .cardBody {
+    padding: 0.85rem 0.5rem 0.85rem;
+  }
+
+  .productMetaRow {
+    gap: 0.2rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .productWeight {
+    font-size: 1.05rem;
+  }
+
+  .metaDivider {
+    font-size: 0.95rem;
+    margin: 0 0.15rem;
+  }
+
+  .productPrice {
+    font-size: 1.05rem;
+  }
+
+  .strikethroughPrice {
+    font-size: 0.78rem;
+  }
+
+  .ratingBadge {
+    margin-bottom: 0.65rem;
+    font-size: 0.72rem;
+    gap: 0.18rem;
+  }
+
+  .ratingCount {
+    font-size: 0.7rem;
+  }
+
+  .cartActionRow {
+    gap: 0.45rem;
+  }
+
+  .qtyStepper {
+    height: 36px;
+    min-width: 78px;
+    max-width: 95px;
+    padding: 0 0.15rem;
+    border-radius: 7px;
+  }
+
+  .qtyBtn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .qtyBtn svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .qtyValue {
+    font-size: 0.85rem;
+    min-width: 18px;
+  }
+
+  .cartIconOnlyBtn {
+    width: 38px;
+    height: 36px;
+    border-radius: 7px;
+  }
+
+  .cartIconOnlyBtn svg {
+    width: 16px;
+    height: 16px;
   }
 }

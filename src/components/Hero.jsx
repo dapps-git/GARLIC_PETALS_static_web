@@ -2,10 +2,10 @@ import Image from 'next/image';
 import { 
   ShoppingBag,
   Phone,
-  Store, 
-  Utensils, 
-  Hotel, 
-  Factory 
+  Store,
+  Utensils,
+  Hotel,
+  Factory
 } from 'lucide-react';
 import styles from './Hero.module.css';
 
@@ -29,9 +29,8 @@ export default function Hero({ onOpenOrder }) {
   return (
     <section id="home" className={styles.heroSection}>
       {/* ========================================================
-          LAPTOP VIEW BANNER (Clean Photo + Vector Crisp HTML Overlays)
-          Uses the raw high-res photo without baked-in texts so 
-          there is ZERO text quality loss.
+          LAPTOP / RESPONSIVE HERO BANNER
+          Clean high-res background + sharp vector HTML typography
           ======================================================== */}
       <div className={styles.laptopHeroWrapper}>
         {/* Clean Background Image */}
@@ -61,14 +60,13 @@ export default function Hero({ onOpenOrder }) {
               </svg>
             </div>
 
-            {/* Headline Block: Pure Garlic. with gold brush swoosh + Pure Trust. */}
+            {/* Headline Block: Pure Garlic. with natural gold brush accent + Pure Trust. */}
             <div className={styles.headlineBlock}>
               <div className={styles.scriptRow}>
                 <span className={styles.pureGarlicText}>Pure Garlic.</span>
-                {/* Golden brush swoosh underline under Garlic. */}
-                <svg className={styles.goldSwoosh} viewBox="0 0 170 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 9C42 2.5 125 2.5 168 9C128 5.5 48 5.5 2 9Z" fill="#c9933b" />
-                  <path d="M12 7.5C50 3 118 3 158 7.5C124 5 58 5 12 7.5Z" fill="#e0b153" />
+                {/* Natural golden brush swoosh underline under Garlic. */}
+                <svg className={styles.goldSwoosh} viewBox="0 0 160 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 5C38 2 110 2 158 5C110 3.5 38 3.5 2 5Z" fill="#c9933b" opacity="0.9" />
                 </svg>
               </div>
 
@@ -79,7 +77,7 @@ export default function Hero({ onOpenOrder }) {
             <div className={styles.pillContainer}>
               <span className={styles.flankLine} />
               <div className={styles.pillBadge}>
-                <span>Carefully Hand - Peeled for Best Quality &amp; Taste.</span>
+                <span>Carefully Hand-Peeled for Best Quality &amp; Taste.</span>
               </div>
               <span className={styles.flankLine} />
             </div>
@@ -135,86 +133,69 @@ export default function Hero({ onOpenOrder }) {
 
               <div className={styles.badgeDivider} />
 
-              {/* Badge 4: Ready to Use Save Time (Speed Clock) */}
+              {/* Badge 4: Ready to Use (Speed Clock) */}
               <div className={styles.badgeItem}>
                 <div className={styles.badgeCircle}>
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e3b2b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    {/* 3 speed motion dashes */}
                     <path d="M2 8.5h3" />
                     <path d="M1 12.5h4" />
                     <path d="M2 16.5h3" />
-                    {/* Clock face & hands */}
                     <circle cx="14" cy="13" r="7" />
                     <polyline points="14 9.5 14 13 16.5 14.5" />
                     <path d="M14 3.5v2.5" />
                   </svg>
                 </div>
                 <div className={styles.badgeLabel}>
-                  <span className={styles.boldLabel}>Ready to Use</span>
-                  <span className={styles.subLabel}>Save Time</span>
+                  <span className={styles.boldLabel}>Ready to</span>
+                  <span className={styles.subLabel}>Use</span>
                 </div>
               </div>
             </div>
 
-            {/* Action Buttons: Order Now & Contact Us in Lap View */}
+            {/* Action Buttons: Order Now & Contact Us */}
             <div className={styles.heroActionButtons}>
               <a href="#products" className={styles.heroOrderBtn}>
-                <ShoppingBag size={18} strokeWidth={2.2} />
+                <ShoppingBag size={15} strokeWidth={1.8} />
                 <span>Order Now</span>
               </a>
 
               <a href="tel:9567458588" className={styles.heroContactBtn}>
-                <Phone size={17} strokeWidth={2.2} />
+                <Phone size={14} strokeWidth={1.8} />
                 <span>Contact Us</span>
               </a>
             </div>
           </div>
+        </div>
 
-          {/* IDEAL FOR Bottom Ribbon Bar */}
-          <div className={styles.idealForRibbon}>
+        {/* IDEAL FOR Bottom Ribbon Bar in Both Desktop & Mobile Views */}
+        <div className={styles.idealForRibbon}>
+          <div className={styles.ribbonContainer}>
             <span className={styles.idealForTag}>IDEAL FOR</span>
             <div className={styles.ribbonDivider} />
 
             <div className={styles.idealTarget}>
-              <Store size={18} />
+              <Store size={15} strokeWidth={2} />
               <span>RESTAURANTS</span>
             </div>
             <span className={styles.targetSep}>|</span>
 
             <div className={styles.idealTarget}>
-              <Utensils size={18} />
+              <Utensils size={15} strokeWidth={2} />
               <span>CATERERS</span>
             </div>
             <span className={styles.targetSep}>|</span>
 
             <div className={styles.idealTarget}>
-              <Hotel size={18} />
+              <Hotel size={15} strokeWidth={2} />
               <span>HOTELS</span>
             </div>
             <span className={styles.targetSep}>|</span>
 
             <div className={styles.idealTarget}>
-              <Factory size={18} />
+              <Factory size={15} strokeWidth={2} />
               <span>FOOD INDUSTRIES</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* ========================================================
-          MOBILE VIEW BANNER (Tailored for vertical smartphone screens)
-          IDEAL FOR section cropped out as requested
-          ======================================================== */}
-      <div className={styles.mobileHeroWrapper}>
-        <div className={styles.mobileBannerFrame}>
-          <Image 
-            src="/images/mobile-banner-clean.jpg" 
-            alt="Petals Peeled Garlic Mobile Banner" 
-            width={576} 
-            height={852} 
-            className={styles.mobileBannerImg}
-            priority
-          />
         </div>
       </div>
     </section>

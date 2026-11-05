@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import styles from './Footer.module.css';
 
@@ -11,7 +12,7 @@ export default function Footer({ onOpenOrder }) {
           <div className={styles.brandCol}>
             <div className={styles.logoWrapper}>
               <Image 
-                src="/images/petals-logo-transparent.svg" 
+                src="/images/petals-real-logo.png" 
                 alt="Petals Peeled Garlic Logo" 
                 width={56} 
                 height={56} 
@@ -27,11 +28,11 @@ export default function Footer({ onOpenOrder }) {
           <div className={styles.linksCol}>
             <h4 className={styles.columnHeading}>QUICK LINKS</h4>
             <ul className={styles.linkList}>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about" onClick={(e) => { e.preventDefault(); onOpenOrder(); }}>About Us</a></li>
-              <li><a href="#why-us" onClick={(e) => { e.preventDefault(); onOpenOrder(); }}>Health Benefits</a></li>
-              <li><a href="#products">Our Products</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><Link href="/#home">Home</Link></li>
+              <li><Link href="/products">Our Products</Link></li>
+              <li><Link href="/#about">About Us</Link></li>
+              <li><Link href="/#why-petals">Why Petals</Link></li>
+              <li><Link href="/#faq">FAQ &amp; Delivery</Link></li>
             </ul>
           </div>
 

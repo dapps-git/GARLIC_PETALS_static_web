@@ -18,26 +18,26 @@ export default function Header() {
     <header className={styles.headerWrapper}>
       <nav className={styles.navBar}>
         <div className={styles.navContainer}>
-          {/* Logo with Green Circle and Green Text */}
+          {/* Real Petals Logo with Transparent Background */}
           <Link href="/" className={styles.brandLogo} aria-label="Petals Peeled Garlic">
             <Image 
-              src="/images/petals-logo-green.svg" 
+              src="/images/petals-real-logo.png" 
               alt="Petals Peeled Garlic Logo" 
-              width={50} 
-              height={50} 
+              width={52} 
+              height={52} 
               className={styles.navbarLogoImg}
               priority
             />
           </Link>
 
-          {/* Navigation Links: Home, Why Petals, Products, Bulk Supply, How It Works, FAQ */}
+          {/* Navigation Links: Home, Why Petals, Products (Separate Page), Bulk Supply, How It Works, FAQ */}
           <div className={styles.desktopNav}>
-            <a href="#home" className={styles.navLink}>Home</a>
-            <a href="#why-petals" className={styles.navLink}>Why Petals</a>
-            <a href="#products" className={styles.navLink}>Products</a>
-            <a href="#bulk-supply" className={styles.navLink}>Bulk Supply</a>
-            <a href="#how-it-works" className={styles.navLink}>How It Works</a>
-            <a href="#faq" className={styles.navLink}>FAQ</a>
+            <Link href="/#home" className={styles.navLink}>Home</Link>
+            <Link href="/#why-petals" className={styles.navLink}>Why Petals</Link>
+            <Link href="/products" className={styles.navLink}>Products</Link>
+            <Link href="/#bulk-supply" className={styles.navLink}>Bulk Supply</Link>
+            <Link href="/#how-it-works" className={styles.navLink}>How It Works</Link>
+            <Link href="/#faq" className={styles.navLink}>FAQ</Link>
           </div>
 
           {/* Cart Icon & Mobile Menu Toggle */}
@@ -69,12 +69,12 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className={styles.mobileNavDropdown}>
           <div className={styles.mobileNavLinks}>
-            <a href="#home" onClick={() => setMobileMenuOpen(false)}>Home</a>
-            <a href="#why-petals" onClick={() => setMobileMenuOpen(false)}>Why Petals</a>
-            <a href="#products" onClick={() => setMobileMenuOpen(false)}>Products</a>
-            <a href="#bulk-supply" onClick={() => setMobileMenuOpen(false)}>Bulk Supply</a>
-            <a href="#how-it-works" onClick={() => setMobileMenuOpen(false)}>How It Works</a>
-            <a href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
+            <Link href="/#home" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link href="/#why-petals" onClick={() => setMobileMenuOpen(false)}>Why Petals</Link>
+            <Link href="/products" onClick={() => setMobileMenuOpen(false)}>Products</Link>
+            <Link href="/#bulk-supply" onClick={() => setMobileMenuOpen(false)}>Bulk Supply</Link>
+            <Link href="/#how-it-works" onClick={() => setMobileMenuOpen(false)}>How It Works</Link>
+            <Link href="/#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
             <a 
               href="#cart" 
               onClick={(e) => { 
@@ -86,7 +86,7 @@ export default function Header() {
             >
               Shopping Cart {mounted && totalItems > 0 ? `(${totalItems})` : ''}
             </a>
-            <a href="#footer" onClick={() => setMobileMenuOpen(false)}>Contact</a>
+            <Link href="/#footer" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
         </div>
       )}

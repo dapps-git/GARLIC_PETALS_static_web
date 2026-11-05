@@ -4,24 +4,20 @@ import styles from './WhyPetals.module.css';
 export default function WhyPetals() {
   const points = [
     {
-      emoji: '🌿',
-      title: '100% Natural',
-      desc: 'Just garlic. No chemicals, no shortcuts.'
+      title: '100% Raw & Natural',
+      desc: 'Pure garlic cloves. No chemical washing, no acid treatments, and no preservatives.'
     },
     {
-      emoji: '🧼',
-      title: 'Hygienically Peeled',
-      desc: 'Hand-peeled and cleaned with care.'
+      title: 'Clean & Dry Packed',
+      desc: 'Peeled hygienically and packed dry in airtight bags so it stays fresh in your fridge.'
     },
     {
-      emoji: '⏱',
-      title: 'Saves Time',
-      desc: 'Open, scoop, cook. Prep time drops to zero.'
+      title: 'Zero Peeling Time',
+      desc: 'No sticky fingers, no skin waste, and no morning hassle. Just open, scoop, and cook.'
     },
     {
-      emoji: '🚚',
       title: 'Doorstep Delivery',
-      desc: 'Fresh to your door across Kerala.'
+      desc: 'Daily dispatch from hubs in Thrissur, Ernakulam, Kollam, and Trivandrum.'
     }
   ];
 
@@ -29,16 +25,17 @@ export default function WhyPetals() {
     <section id="why-petals" className={styles.section}>
       <div className={`container ${styles.container}`}>
         <div className={styles.header}>
-          <span className={styles.badge}>THE PETALS STANDARD</span>
-          <h2 className={styles.title}>Why Petals</h2>
+          <span className={styles.badge}>WHY SWITCH TO PETALS</span>
+          <h2 className={styles.title}>Real Fresh Garlic. Zero Mess.</h2>
           <div className={styles.divider} />
-          <p className={styles.subtitle}>Everything garlic should be</p>
+          <p className={styles.subtitle}>
+            Save hours in your home or restaurant kitchen without compromising on aroma or taste.
+          </p>
         </div>
 
         <div className={styles.grid}>
           {points.map((p, idx) => (
             <div key={idx} className={styles.card}>
-              <div className={styles.emojiCircle}>{p.emoji}</div>
               <h3 className={styles.cardTitle}>{p.title}</h3>
               <p className={styles.cardDesc}>{p.desc}</p>
             </div>

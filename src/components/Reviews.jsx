@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { 
-  Star, 
   CheckCircle2, 
   ThumbsUp, 
   MessageSquare, 
@@ -9,6 +8,7 @@ import {
   Sparkles,
   X
 } from 'lucide-react';
+import ReviewStar from './ReviewStar';
 import styles from './Reviews.module.css';
 
 const INITIAL_REVIEWS = [
@@ -18,12 +18,12 @@ const INITIAL_REVIEWS = [
     role: 'Home Cook',
     location: 'Kadavanthra, Kochi',
     rating: 5,
-    date: '2 days ago',
+    date: '3 days ago',
     verified: true,
     pack: '5 kg Fresh Pouch',
-    headline: 'Saves 20 minutes of morning cooking prep every day!',
-    content: 'The cloves are large, firm, and completely clean with zero blemishes. Stored in the refrigerator inside the zip pouch, they stayed crisp and fresh for over 3 weeks. No chemical smell at all, just 100% natural garlic.',
-    helpfulCount: 24,
+    headline: 'Saves so much morning cooking time',
+    content: 'Order arrived in Kochi within 24 hours of booking on WhatsApp. Cloves were completely dry, firm, and lasted over 3 weeks in the fridge. No peeling mess before packing school lunch boxes.',
+    helpfulCount: 28,
     category: 'home'
   },
   {
@@ -34,10 +34,10 @@ const INITIAL_REVIEWS = [
     rating: 5,
     date: '5 days ago',
     verified: true,
-    pack: '10 kg Wholesale Pack',
-    headline: 'Significant labor savings for our banquet prep',
-    content: 'We order 50kg to 100kg every week from the Thrissur branch. Peeling garlic used to take 2 kitchen helpers three hours every morning. Petals garlic is fresh, uniform, and delivered right to our kitchen door on schedule.',
-    helpfulCount: 41,
+    pack: '15 kg Bulk Pack',
+    headline: 'Reliable bulk supply for our catering kitchen',
+    content: 'We order 30 to 50 kg every week from the Thrissur hub. Peeling garlic used to tie down two kitchen helpers for two hours every morning. Petals garlic arrives clean, dry, and ready to grind.',
+    helpfulCount: 42,
     category: 'catering'
   },
   {
@@ -49,23 +49,23 @@ const INITIAL_REVIEWS = [
     date: '1 week ago',
     verified: true,
     pack: '1 kg Fresh Pouch',
-    headline: 'Top notch packaging and doorstep delivery',
-    content: 'First time trying pre-peeled garlic. Delivered in Trivandrum within 24 hours of ordering on WhatsApp. The seal was airtight and every clove was pure white without any cuts or soft spots. Super happy with the quality!',
-    helpfulCount: 16,
+    headline: 'Fresh quality with zero chemical smell',
+    content: 'I was hesitant about pre-peeled garlic, but the 1 kg pack was impressive. Pure dry cloves with the natural pungent aroma intact. No vinegar or chemical wash smell at all.',
+    helpfulCount: 19,
     category: 'home'
   },
   {
     id: 4,
     name: 'Fatima Shaji',
-    role: 'Biryani Cloud Kitchen Owner',
+    role: 'Cloud Kitchen Owner',
     location: 'Calicut',
     rating: 5,
     date: '2 weeks ago',
     verified: true,
     pack: '10 kg Wholesale Pack',
-    headline: 'Authentic punch and flavor for our signature gravies',
-    content: 'Unlike market peeled garlic that is treated with water or chemicals, Petals garlic has the authentic strong aroma and juices intact. Our biryani pastes turn out thick, fragrant, and consistent every single batch.',
-    helpfulCount: 32,
+    headline: 'Strong natural flavor for our biryani pastes',
+    content: 'Unlike market peeled garlic that is water-soaked and soggy, this is solid and fresh. When ground with ginger, the paste is thick and aromatic. Perfect for our daily biryani dum prep.',
+    helpfulCount: 35,
     category: 'catering'
   },
   {
@@ -77,10 +77,24 @@ const INITIAL_REVIEWS = [
     date: '3 weeks ago',
     verified: true,
     pack: '5 kg Fresh Pouch',
-    headline: 'Will never buy unpeeled garlic again',
-    content: 'No sticky fingers, no peeling hassle, and zero waste! The 5 kg pack is perfect for our joint family. Excellent customer service over WhatsApp as well.',
-    helpfulCount: 19,
+    headline: 'Will never buy whole unpeeled garlic again',
+    content: 'No sticky fingers, no skin flakes flying everywhere, and zero waste from spoiled cloves. The 5 kg pack easily lasts our family a month in the refrigerator.',
+    helpfulCount: 22,
     category: 'home'
+  },
+  {
+    id: 6,
+    name: 'Suresh Menon',
+    role: 'Restaurant Manager',
+    location: 'Aluva, Ernakulam',
+    rating: 5,
+    date: '1 month ago',
+    verified: true,
+    pack: '15 kg Bulk Pack',
+    headline: 'Consistent supply and honest pricing',
+    content: 'Great communication directly on WhatsApp. Doorstep delivery is prompt and rates are lower than paying kitchen staff to peel raw garlic daily. Highly recommend for commercial kitchens.',
+    helpfulCount: 31,
+    category: 'catering'
   }
 ];
 
@@ -179,7 +193,7 @@ export default function Reviews() {
             <div className={styles.bigScore}>4.9</div>
             <div className={styles.starsRow}>
               {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} size={20} className={styles.goldStarFilled} fill="#f59e0b" color="#f59e0b" />
+                <ReviewStar key={i} size={20} className={styles.goldStarFilled} />
               ))}
             </div>
             <div className={styles.scoreMeta}>Based on 320+ verified orders</div>
@@ -287,12 +301,10 @@ export default function Reviews() {
               <div className={styles.ratingAndPackRow}>
                 <div className={styles.stars}>
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <Star 
+                    <ReviewStar 
                       key={s} 
                       size={15} 
                       className={s <= rev.rating ? styles.goldStarFilled : styles.starEmpty}
-                      fill={s <= rev.rating ? '#f59e0b' : 'none'}
-                      color={s <= rev.rating ? '#f59e0b' : '#cbd5e1'}
                     />
                   ))}
                 </div>

@@ -10,6 +10,8 @@ export const PRODUCTS = [
     discountAmount: 0,
     unitPrice: 200,
     kgValue: 1,
+    rating: 4.8,
+    reviewCount: 142,
     image: '/images/peeled-garlic-vacuum-pouch.jpg',
     alt: 'Petals Peeled Garlic 1 kg Vacuum Pouch'
   },
@@ -22,6 +24,8 @@ export const PRODUCTS = [
     discountAmount: 100,
     unitPrice: 180,
     kgValue: 5,
+    rating: 4.9,
+    reviewCount: 98,
     image: '/images/peeled-garlic-vacuum-pouch.jpg',
     alt: 'Petals Peeled Garlic 5 kg Vacuum Pouch'
   },
@@ -34,8 +38,24 @@ export const PRODUCTS = [
     discountAmount: 100,
     unitPrice: 190,
     kgValue: 10,
+    rating: 4.8,
+    reviewCount: 84,
     image: '/images/peeled-garlic-vacuum-pouch.jpg',
     alt: 'Petals Peeled Garlic 10 kg Vacuum Pouch'
+  },
+  {
+    id: 'garlic-15kg',
+    weight: '15 kg',
+    name: 'Petals Peeled Garlic - 15 kg',
+    price: 2700,
+    originalPrice: 3000,
+    discountAmount: 300,
+    unitPrice: 180,
+    kgValue: 15,
+    rating: 4.9,
+    reviewCount: 65,
+    image: '/images/peeled-garlic-vacuum-pouch.jpg',
+    alt: 'Petals Peeled Garlic 15 kg Bulk Kitchen Pack'
   }
 ];
 

@@ -1,11 +1,14 @@
 .reviewsSection {
-  padding: 5rem 1.5rem;
+  padding: 5rem 0;
   background-color: #ffffff;
+  width: 100%;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1320px;
   margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
 }
 
 /* Header */
@@ -29,10 +32,10 @@
 
 .title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2.25rem;
+  font-weight: 500;
   color: #0e3b2b;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
   margin: 0.2rem 0 0.5rem 0;
 }
 
@@ -526,8 +529,107 @@
     padding-top: 1.25rem;
   }
 
+  /* Keep 2 cards in one row */
   .reviewsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .reviewsSection {
+    padding: 2.75rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 1.75rem;
+  }
+
+  .title {
+    font-size: 1.85rem;
+  }
+
+  .ratingOverviewCard {
+    padding: 1.25rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .bigScore {
+    font-size: 2.75rem;
+  }
+
+  /* 2 cards in one row on mobile as requested */
+  .reviewsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+  }
+
+  .reviewCard {
+    padding: 0.85rem 0.65rem;
+    border-radius: 10px;
+  }
+
+  .userWrap {
+    gap: 0.4rem;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .userName {
+    font-size: 0.82rem;
+    line-height: 1.2;
+  }
+
+  .verifiedBadge {
+    display: none;
+  }
+
+  .userLocation {
+    font-size: 0.7rem;
+    line-height: 1.2;
+  }
+
+  .reviewDate {
+    display: none;
+  }
+
+  .ratingAndPackRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.45rem;
+  }
+
+  .packTag {
+    font-size: 0.65rem;
+    padding: 0.12rem 0.35rem;
+  }
+
+  .reviewHeadline {
+    font-size: 0.82rem;
+    line-height: 1.25;
+    margin-bottom: 0.3rem;
+  }
+
+  .reviewContent {
+    font-size: 0.74rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+  }
+
+  .helpfulBtn {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.45rem;
   }
 }
 
