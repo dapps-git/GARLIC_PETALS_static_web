@@ -93,7 +93,15 @@ export function CartProvider({ children }) {
         if (saved) {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed) && parsed.length > 0) {
-            setCartItems(parsed);
+            // Match and sync up-to-date current products
+            const current = parsed
+              .map(item => {
+                const match = PRODUCTS.find(p => p.id === item.id);
+                if (!match) return null;
+                return { ...match, quantity: item.quantity || 1 };
+              })
+              .filter(Boolean);
+            setCartItems(current);
           }
         }
       }

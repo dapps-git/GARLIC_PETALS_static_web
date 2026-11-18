@@ -291,17 +291,17 @@ export default function CartModal() {
                     </div>
                     <div className={styles.itemInfo}>
                       <div className={styles.itemTitleRow}>
-                        <h5 className={styles.itemName}>{item.weight} Peeled Garlic</h5>
+                        <h5 className={styles.itemName}>{item.title || item.name}</h5>
                         <button 
                           type="button" 
                           className={styles.deleteBtn}
                           onClick={() => removeFromCart(item.id)}
-                          aria-label={`Remove ${item.name}`}
+                          aria-label={`Remove ${item.title || item.name}`}
                         >
                           <Trash2 size={16} />
                         </button>
                       </div>
-                      <div className={styles.itemPriceRate}>₹{item.price} per pack</div>
+                      <div className={styles.itemPriceRate}>{item.weight} • ₹{item.price} per pack</div>
                       
                       <div className={styles.stepperAndTotal}>
                         <div className={styles.stepper}>

@@ -126,7 +126,7 @@ export default function Products() {
                       type="button"
                       className={`${styles.addToCartBtn} ${isAdded ? styles.addedBtn : ''}`}
                       onClick={() => handleAddToCart(product)}
-                      aria-label={`Add ${qty} ${product.weight} to cart`}
+                      aria-label={`Add ${qty} ${product.title || product.name} to cart`}
                     >
                       {isAdded ? (
                         <>
