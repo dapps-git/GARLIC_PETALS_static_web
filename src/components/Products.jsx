@@ -9,10 +9,10 @@ export default function Products() {
   const { addToCart } = useCart();
   const [addedId, setAddedId] = useState(null);
   const [quantities, setQuantities] = useState({
-    'garlic-1kg': 1,
-    'garlic-5kg': 1,
-    'garlic-10kg': 1,
-    'garlic-15kg': 1,
+    'fermented-garlic': 1,
+    'half-bottle-garlic': 1,
+    'half-packet-garlic': 1,
+    'honey-garlic': 1,
   });
 
   const handleDecrease = (productId) => {
@@ -79,7 +79,7 @@ export default function Products() {
 
                 {/* 2. Content Row: Title, Weight | Price, Rating, Stepper & Add button */}
                 <div className={styles.cardBody}>
-                  <h3 className={styles.productTitle}>Peeled Garlic</h3>
+                  <h3 className={styles.productTitle}>{product.title || product.name}</h3>
 
                   {/* Row 1: Weight Pill | Price */}
                   <div className={styles.productMetaRow}>

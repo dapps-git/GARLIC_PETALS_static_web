@@ -24,8 +24,8 @@ const KERALA_DISTRICTS = [
 
 export default function OrderModal({ orderData, onClose }) {
   const [pack, setPack] = useState(orderData?.pack || {
-    id: 'garlic-1kg',
-    name: 'Petals Peeled Garlic',
+    id: 'half-packet-garlic',
+    name: 'Petals Half Packet Garlic',
     size: '1 Kg',
     price: 200
   });

@@ -245,7 +245,7 @@ export default function CartModal() {
             </div>
             <h3 className={styles.emptyTitle}>Your cart is empty</h3>
             <p className={styles.emptyText}>
-              Choose from our 1 kg, 5 kg, or 10 kg fresh peeled garlic packs to start your order.
+              Choose from our premium peeled garlic products to start your order.
             </p>
             <div className={styles.quickAddRow}>
               {PRODUCTS.map(p => (
@@ -255,7 +255,7 @@ export default function CartModal() {
                   className={styles.quickAddBtn}
                   onClick={() => addToCart(p, 1, false)}
                 >
-                  <Plus size={14} /> Add {p.weight} (₹{p.price})
+                  <Plus size={14} /> Add {p.title || p.name} (₹{p.price})
                 </button>
               ))}
             </div>

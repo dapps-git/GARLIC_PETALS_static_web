@@ -34,10 +34,10 @@ export default function ProductsPage() {
   return (
     <>
       <Head>
-        <title>Products - Petals Peeled Garlic (1kg, 5kg, 10kg, 15kg)</title>
+        <title>Products - Petals Peeled Garlic | Fermented, Bottle, Packet & Honey Garlic</title>
         <meta 
           name="description" 
-          content="Order fresh, hygienically peeled garlic online in 1kg, 5kg, 10kg, and 15kg packs. Zero waste, ready to cook, doorstep delivery across Kerala." 
+          content="Order Fermented Garlic, Half Bottle, Half Packet, and Honey Garlic online across Kerala. Fresh, 100% natural, ready to use, doorstep delivery." 
         />
         <meta property="og:title" content="Products - Petals Peeled Garlic" />
         <meta property="og:image" content="/images/main-banner.jpg" />
